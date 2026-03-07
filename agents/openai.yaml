@@ -1,0 +1,5 @@
+interface:
+  display_name: Feishu Dashboard Automator
+  short_description: 自动生成飞书仪表盘源视图并导出卡片配置清单，预留浏览器层卡片自动化。
+  default_prompt: Use $feishu-dashboard-automator to inspect a Feishu base, sync dashboard
+    source views, and export a reusable dashboard card checklist.

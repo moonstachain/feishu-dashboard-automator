@@ -1,0 +1,523 @@
+base_name: 奥德赛经营总览
+base_url: https://h52xu4gwob.feishu.cn/wiki/UfBkwxSjfiwwEzkobshcjKLZnE7
+app_token: BBtgbP2VjajqfUsfjSFclOnjn7f
+
+dashboard_groups:
+  - name: 交付运营看板
+  - name: 目标预算看板
+  - name: 流量转化看板
+
+tables:
+  交付项目表:
+    table_id: tblYqUJYo7Jsfwxo
+    fields:
+      交付名称:
+        field_id: fldwGf2iJU
+        type: text
+      客户名称:
+        field_id: fld6AB9Cxc
+        type: text
+      来源订单:
+        field_id: fldlGX62FU
+        type: link
+      来源机会:
+        field_id: fldJSxBDAL
+        type: link
+      交付类型:
+        field_id: fldmsNpQpc
+        type: single_select
+        options:
+          线下课/密训: optT1joitO
+          私董会/司董会: optufLJt6E
+          训练营/社群: optlx96ABC
+          高净值深服务: optkWOP2J7
+      期次/班次:
+        field_id: fldYwSDgQF
+        type: text
+      当前交付阶段:
+        field_id: fldFIjmbZA
+        type: link
+        linked_records:
+          待开营: recvd6QwEHEeC7
+          已分组: recvd6QwEH6wuu
+          进行中: recvd6QwEHzH31
+          待复训: recvd6QwEHauHz
+          待升单: recvd6QwEHdOFC
+          已完结: recvd6QwEHsVsz
+      当前风险:
+        field_id: fldl48bRMB
+        type: text
+
+  学员/客户档案表:
+    table_id: tblTkAruzNaoFRhn
+    fields:
+      客户名称:
+        field_id: fldQZkiuFp
+        type: text
+      手机号:
+        field_id: fldGKGPo8w
+        type: text
+      职位:
+        field_id: fldXH5P5UG
+        type: text
+      职位标签:
+        field_id: fldtzfcmcJ
+        type: text
+      历史身份:
+        field_id: fldErBx559
+        type: text
+      私董概率:
+        field_id: fldirfaJJE
+        type: single_select
+        options:
+          高: optodgsr7c
+          中: optsEM1Vpg
+          低: optHntOcrL
+          待判断: optdfzRCTh
+      是否邀请复训:
+        field_id: fldRYQts9E
+        type: single_select
+        options:
+          是: optkn577WC
+          否: optEIAa7Ki
+          待确认: optlZ5ORSK
+      备注:
+        field_id: fld9l2KEbo
+        type: text
+
+  目标预算表:
+    table_id: tblTISBd1baMuact
+    fields:
+      周期类型:
+        field_id: fldzc1Ge89
+        type: single_select
+        options:
+          月: optIAhMtHs
+          周: opt47ncYyP
+          日: optdrrZU0A
+      服务线:
+        field_id: fldj2KFwYa
+        type: link
+      指标名称:
+        field_id: fldmIW5QcE
+        type: text
+      目标值:
+        field_id: fldYi4bPc7
+        type: number
+      实际值:
+        field_id: fldSbpOi8S
+        type: number
+
+  经营节奏表:
+    table_id: tblQ5bWiLjhBfx1U
+    fields:
+      日期:
+        field_id: fldmQTtm01
+        type: date
+      周次:
+        field_id: fldFijeyQ0
+        type: text
+      指标名称:
+        field_id: flduKiy3B3
+        type: text
+      目标值:
+        field_id: fldxVCYaTq
+        type: number
+      实际值:
+        field_id: fldsOormKg
+        type: number
+      差值:
+        field_id: fldC8wKCwb
+        type: number
+
+  订单事实表:
+    table_id: tblaz4Vqt4lZjFFy
+    fields:
+      订单日期:
+        field_id: fldxCDeNtM
+        type: date
+      订单来源:
+        field_id: fldoAKXLQV
+        type: text
+      支付金额:
+        field_id: fldTnsola0
+        type: number
+      来源月份:
+        field_id: fldfzT6mPo
+        type: text
+
+  私域运营事实表:
+    table_id: tblcg9ZYaRw377gq
+    fields:
+      日期:
+        field_id: flddcHFMIE
+        type: date
+      账号:
+        field_id: fldxpohnz3
+        type: text
+      新增加私:
+        field_id: fld5ZEua4e
+        type: number
+      当日私域流水:
+        field_id: fldNRVhJQP
+        type: number
+      备注:
+        field_id: fldwgUI3Bu
+        type: text
+
+  内容流量事实表:
+    table_id: tbl99gHFqcfv7qI6
+    fields:
+      平台:
+        field_id: fldmbOy53v
+        type: text
+      账号:
+        field_id: fldXsMaLlT
+        type: text
+      内容标题:
+        field_id: fldty9nRgb
+        type: text
+      发布时间:
+        field_id: fldvHS8XsO
+        type: date
+      播放量:
+        field_id: fldFtn5MsX
+        type: number
+      完播率:
+        field_id: fldXsc45jL
+        type: number
+      互动量:
+        field_id: fld2Nhfuh2
+        type: number
+      关注量:
+        field_id: fld0jfjLto
+        type: number
+
+view_specs:
+  - dashboard: 交付运营看板
+    table: 交付项目表
+    view_name: 全部交付
+    sort_notes:
+      - 当前交付阶段
+      - 期次/班次
+  - dashboard: 交付运营看板
+    table: 交付项目表
+    view_name: 待复训
+    conditions:
+      - field: 当前交付阶段
+        operator: is
+        values: [待复训]
+  - dashboard: 交付运营看板
+    table: 交付项目表
+    view_name: 待升单
+    conditions:
+      - field: 当前交付阶段
+        operator: is
+        values: [待升单]
+  - dashboard: 交付运营看板
+    table: 交付项目表
+    view_name: 已成交未入交付
+    conjunction: or
+    display_fields: [交付名称, 来源订单, 来源机会]
+    conditions:
+      - field: 来源订单
+        operator: isEmpty
+      - field: 来源机会
+        operator: isEmpty
+  - dashboard: 交付运营看板
+    table: 学员/客户档案表
+    view_name: 高私董概率
+    display_fields: [客户名称, 职位, 职位标签, 私董概率, 备注]
+    conditions:
+      - field: 私董概率
+        operator: is
+        values: [高]
+  - dashboard: 交付运营看板
+    table: 学员/客户档案表
+    view_name: 已邀请复训
+    display_fields: [客户名称, 手机号, 历史身份, 是否邀请复训]
+    conditions:
+      - field: 是否邀请复训
+        operator: is
+        values: [是]
+
+  - dashboard: 目标预算看板
+    table: 目标预算表
+    view_name: 月目标总览
+    conditions:
+      - field: 周期类型
+        operator: is
+        values: [月]
+  - dashboard: 目标预算看板
+    table: 目标预算表
+    view_name: 周目标总览
+    conditions:
+      - field: 周期类型
+        operator: is
+        values: [周]
+  - dashboard: 目标预算看板
+    table: 目标预算表
+    view_name: 有服务线目标
+    conditions:
+      - field: 服务线
+        operator: isNotEmpty
+  - dashboard: 目标预算看板
+    table: 经营节奏表
+    view_name: 周节奏
+    conditions:
+      - field: 周次
+        operator: isNotEmpty
+      - field: 日期
+        operator: isEmpty
+  - dashboard: 目标预算看板
+    table: 经营节奏表
+    view_name: 日节奏
+    conditions:
+      - field: 日期
+        operator: isNotEmpty
+  - dashboard: 目标预算看板
+    table: 经营节奏表
+    view_name: 节奏偏差大
+    display_fields: [日期, 周次, 指标名称, 目标值, 实际值, 差值]
+    sort_notes:
+      - 按差值绝对值降序手动补充
+    conditions:
+      - field: 差值
+        operator: isNotEmpty
+  - dashboard: 目标预算看板
+    table: 目标预算表
+    view_name: ARPU观察
+    conjunction: or
+    conditions:
+      - field: 指标名称
+        operator: is
+        values: [ARPU-199班型]
+      - field: 指标名称
+        operator: is
+        values: [ARPU-3980班型]
+      - field: 指标名称
+        operator: is
+        values: [直播间主推班型ARPU]
+      - field: 指标名称
+        operator: is
+        values: [综合ARPU]
+  - dashboard: 目标预算看板
+    table: 订单事实表
+    view_name: 本月订单
+    conditions:
+      - field: 来源月份
+        operator: is
+        values: ['{{current_month}}']
+
+  - dashboard: 流量转化看板
+    table: 私域运营事实表
+    view_name: 总加私趋势
+    conditions:
+      - field: 账号
+        operator: is
+        values: [总加私]
+  - dashboard: 流量转化看板
+    table: 私域运营事实表
+    view_name: 分账号加私
+    conditions:
+      - field: 账号
+        operator: isNot
+        values: [总加私]
+  - dashboard: 流量转化看板
+    table: 私域运营事实表
+    view_name: 私域流水趋势
+    conditions:
+      - field: 当日私域流水
+        operator: isNotEmpty
+  - dashboard: 流量转化看板
+    table: 私域运营事实表
+    view_name: 高流水日
+    display_fields: [日期, 账号, 当日私域流水, 备注]
+    sort_notes:
+      - 按当日私域流水降序手动补充
+    conditions:
+      - field: 当日私域流水
+        operator: isNot
+        values: ['0']
+  - dashboard: 流量转化看板
+    table: 内容流量事实表
+    view_name: 平台内容表现
+  - dashboard: 流量转化看板
+    table: 内容流量事实表
+    view_name: 高互动内容
+    display_fields: [平台, 账号, 内容标题, 互动量, 关注量]
+    sort_notes:
+      - 按互动量降序手动补充
+    conditions:
+      - field: 互动量
+        operator: isNot
+        values: ['0']
+  - dashboard: 流量转化看板
+    table: 内容流量事实表
+    view_name: 高播放内容
+    display_fields: [平台, 内容标题, 播放量, 完播率]
+    sort_notes:
+      - 按播放量降序手动补充
+    conditions:
+      - field: 播放量
+        operator: isNot
+        values: ['0']
+  - dashboard: 流量转化看板
+    table: 订单事实表
+    view_name: 按来源订单
+    conditions:
+      - field: 订单来源
+        operator: isNotEmpty
+
+card_specs:
+  交付运营看板:
+    - name: 交付阶段分布
+      type: 柱状图
+      table: 交付项目表
+      view: 全部交付
+      dimension: 当前交付阶段
+      metric: 记录数
+      purpose: 看交付堆积点
+    - name: 各期次人数
+      type: 条形图
+      table: 交付项目表
+      view: 全部交付
+      dimension: 期次/班次
+      metric: 记录数
+      purpose: 看哪个班次最重
+    - name: 交付类型结构
+      type: 环形图
+      table: 交付项目表
+      view: 全部交付
+      dimension: 交付类型
+      metric: 记录数
+      purpose: 看线下、私董、深服务结构
+    - name: 待复训名单
+      type: 明细表卡
+      table: 交付项目表
+      view: 待复训
+      fields: [交付名称, 客户名称, 期次/班次, 当前风险]
+      purpose: 看可激活客户
+    - name: 高私董概率客户
+      type: 明细表卡
+      table: 学员/客户档案表
+      view: 高私董概率
+      fields: [客户名称, 职位, 职位标签, 私董概率, 备注]
+      purpose: 看升单池
+    - name: 已邀请复训客户
+      type: 明细表卡
+      table: 学员/客户档案表
+      view: 已邀请复训
+      fields: [客户名称, 手机号, 历史身份, 是否邀请复训]
+      purpose: 看复训跟进池
+    - name: 已成交未入交付异常
+      type: 明细表卡
+      table: 交付项目表
+      view: 已成交未入交付
+      fields: [交付名称, 来源订单, 来源机会]
+      purpose: 查漏挂
+
+  目标预算看板:
+    - name: 月目标 vs 实际
+      type: 柱状图
+      table: 目标预算表
+      view: 月目标总览
+      dimension: 指标名称
+      metric: [目标值, 实际值]
+      purpose: 看总盘差距
+    - name: 服务线目标达成
+      type: 对比图
+      table: 目标预算表
+      view: 有服务线目标
+      dimension: 服务线
+      metric: [目标值, 实际值]
+      purpose: 看哪条线没达标
+    - name: 周节奏完成情况
+      type: 明细表卡/堆叠条形图
+      table: 经营节奏表
+      view: 周节奏
+      dimension: 周次
+      metric: [目标值, 实际值]
+      purpose: 看周节奏是否偏
+    - name: 日节奏趋势
+      type: 折线图
+      table: 经营节奏表
+      view: 日节奏
+      dimension: 日期
+      metric: 实际值
+      series: 指标名称
+      purpose: 看日波动
+    - name: 节奏偏差大项
+      type: 明细表卡
+      table: 经营节奏表
+      view: 节奏偏差大
+      fields: [日期, 周次, 指标名称, 目标值, 实际值, 差值]
+      purpose: 找失衡点
+    - name: ARPU观察
+      type: 指标卡/条形图
+      table: 目标预算表
+      view: ARPU观察
+      dimension: 指标名称
+      metric: [目标值, 实际值]
+      purpose: 看高客单与低客单结构偏移
+    - name: 本月订单金额
+      type: 指标卡
+      table: 订单事实表
+      view: 本月订单
+      metric: 支付金额汇总
+      purpose: 把预算和真实收入接起来
+
+  流量转化看板:
+    - name: 总加私趋势
+      type: 折线图
+      table: 私域运营事实表
+      view: 总加私趋势
+      dimension: 日期
+      metric: 新增加私
+      purpose: 看加私波动
+    - name: 分账号加私结构
+      type: 分组柱状图
+      table: 私域运营事实表
+      view: 分账号加私
+      dimension: 账号
+      metric: 新增加私汇总
+      purpose: 看哪个承接账号更强
+    - name: 私域流水趋势
+      type: 折线图
+      table: 私域运营事实表
+      view: 私域流水趋势
+      dimension: 日期
+      metric: 当日私域流水
+      purpose: 看私域变现节奏
+    - name: 高流水日
+      type: 明细表卡
+      table: 私域运营事实表
+      view: 高流水日
+      fields: [日期, 账号, 当日私域流水, 备注]
+      purpose: 看峰值来自哪里
+    - name: 平台内容播放表现
+      type: 分组柱状图
+      table: 内容流量事实表
+      view: 平台内容表现
+      dimension: 平台
+      metric: 播放量汇总
+      purpose: 看平台强弱
+    - name: 高互动内容
+      type: 明细表卡
+      table: 内容流量事实表
+      view: 高互动内容
+      fields: [平台, 账号, 内容标题, 互动量, 关注量]
+      purpose: 挑可复用选题
+    - name: 高播放内容
+      type: 明细表卡
+      table: 内容流量事实表
+      view: 高播放内容
+      fields: [平台, 内容标题, 播放量, 完播率]
+      purpose: 看内容抓手
+    - name: 订单来源结构
+      type: 环形图/条形图
+      table: 订单事实表
+      view: 按来源订单
+      dimension: 订单来源
+      metric: 记录数或支付金额汇总
+      purpose: 把内容/私域趋势和收入来源接起来

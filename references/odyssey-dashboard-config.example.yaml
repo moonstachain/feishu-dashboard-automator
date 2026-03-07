@@ -1,0 +1,9 @@
+# Example config derived from the Odyssey consulting-business base.
+# Copy this file, replace the base/table/field mapping, and then edit
+# view_specs + card_specs for the next dashboard module.
+
+extends: ../inputs/odyssey-dashboard-config.yaml
+notes:
+  - Replace app_token and base_url when targeting a different Feishu base.
+  - Update linked_records and select options whenever the destination base uses different record ids or option ids.
+  - Keep the dashboard_groups / view_specs / card_specs contract stable so the same scripts continue to work.
