@@ -1,6 +1,9 @@
 ---
 name: feishu-dashboard-automator
-description: 当用户要自动搭飞书仪表盘、为某个业务 base 建源视图和看板清单、把一组 dashboard 模块标准化，或把飞书仪表盘流程沉淀成可复用模板时触发。
+description: >
+  自动化搭建飞书妙搭仪表盘，根据数据蓝图生成仪表盘配置、区块布局和数据绑定。
+  当用户说"搭建仪表盘"、"做一个妙搭页面"、"驾驶舱搭建"、"自动化妙搭"时使用。
+  NOT for 直接读写多维表数据（用 feishu-bitable-bridge）。
 ---
 
 # Feishu Dashboard Automator
